@@ -1,0 +1,194 @@
+/* Importação de fonte */
+@font-face {
+    font-family: "Work Sans";
+    src: url("../assets/fonts/static/WorkSans-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("../assets/fonts/static/WorkSans-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("../assets/fonts/static/WorkSans-Bold.ttf");
+    font-weight: 700;
+}
+
+/* Veriáveis globais */
+:root {
+    --primary-color: hsl(292, 42%, 14%);
+    --secondary-color: hsl(280, 83%, 55%);
+    --text-color: hsl(292, 16%, 49%);
+    --bg-color: hsl(275, 100%, 97%);
+    --white: hsl(0, 100%, 100%);
+}
+
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-family: "Work Sans";
+    font-size: 1rem;
+    overflow: hidden auto;
+    padding: 0 2rem;
+}
+
+body {
+    width: 100%;
+    min-height: 100dvh;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+
+    anchor-name: --body-anchor;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Imagem ilustrativa do body */
+.body__background {
+    position: absolute;
+    width: 100vw;
+    height: 20rem;
+    z-index: -1;
+}
+
+.body__background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Personalização do FAQ */
+.faq {
+    min-width: 21rem;
+    max-width: 48rem;
+    min-height: 30rem;
+    max-height: 60rem;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+    background-color: var(--white);
+
+    anchor-name: --faq-anchor;
+    position-anchor: --body-anchor;
+    position: absolute;
+    top: 15%;
+    left: anchor(center);
+    z-index: 999;    
+}
+
+.faq__container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.faq__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Acordições */
+.accordion-wrapper {
+    margin-top: 2.5rem;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.accordion {
+    width: 100%;
+}
+
+/* Área de ativação do acordeão */
+.accordion__question {
+    width: 100%;
+    border: none;
+    background: transparent;
+    
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.accordion__question:hover {
+    color: var(--secondary-color);
+}
+
+/* Campos das respostas */
+.accordion__answer {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+
+.accordion__answer.actived {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    height: 100%;
+    opacity: 1;
+    color: var(--text-color);
+}
+
+/* Divisórias entre os acordeões */
+.divisor {
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+}
+
+/* Direitos autorais */
+.attribution {
+    position: absolute;
+    position-anchor: --faq-anchor;
+    top: anchor(bottom);
+
+    font-size: .9rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.attribution a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: hsl(228, 45%, 44%);
+}
+
+/* Adaptando o FAQ para dispositivos mobile */
+@media screen and (width <= 550px) {
+    .faq {
+        padding: 2rem 1rem;
+    }
+
+    .faq__title {
+        font-size: 3rem;
+    }
+
+    .accordion__question {
+        font-size: 1rem;
+        gap: 1.5rem;
+    }
+}
