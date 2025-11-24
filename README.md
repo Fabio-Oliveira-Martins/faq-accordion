@@ -30,7 +30,7 @@ Este projeto é um FAQ de acordeão responsivo, onde cada pergunta pode ser expa
 Copie e cole o link abaixo na barra de pesquisa do seu navegador:
 
 ```
-link do repositório
+https://fabio-oliveira-martins.github.io/faq-accordion
 ```
 
 Após a página carregar, sinta-se a vontade para testar seu funcionamento.
