@@ -56,6 +56,7 @@ Após a página carregar, sinta-se a vontade para testar seu funcionamento.
 ## Autor
 
 - Github: [Fabio-Oliveira-Martins](https://www.github.com/Fabio-Oliveira-Martins)
+- Frontend Mentor: [@Fabio-Oliveira-Martins](https://www.frontendmentor.io/solutions/responsive-faq-accordion-using-flexbox-min-and-max-width-and-foreach-aBr1zVa0k4)
 
 ## Licença
 
